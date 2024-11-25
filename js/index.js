@@ -79,7 +79,6 @@ const handleScrollEvent = () => {
       const [img, circle] = el.children;
       const imgMarginTop = 100 - (diff/5);
       const cirMarginTop = 600 - diff * 2;
-      // const cirMarginTop = 700 - diff * 3;
       img.style.marginTop = imgMarginTop < 0 ? 0 : `${imgMarginTop}px`;
       circle.style.marginTop = cirMarginTop < 100 ? '100px' : `${cirMarginTop}px`;
     }
