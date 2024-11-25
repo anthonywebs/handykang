@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Handy Kang - Home Repair Services">
+    <meta property="og:title" content="Handy Kang - Home Repair Services">
+    <meta property="og:description" content="I’m a handyman based in the North Wales, Pennsylvania, dedicated to delivering top-quality services for all your home needs.">
+    <meta property="og:image" content="./img/banner-handy.jpg">
+    <title>Handy Kang</title>
+    <link href="./css/common.css" rel="stylesheet" type="text/css" />
+    <link href="./css/form.css" rel="stylesheet" type="text/css" />
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="./css/type.css" rel="stylesheet" type="text/css" />
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="./img/favi.png" type="image/x-icon"/>
+  </head>
+  <body id='js-body' class='body'>
+    <nav class='menu-wr'>
+      <div class='header-wr'>
+        <div class='left-menu'>
+          <div onclick='gotoHome()' class='menu'>Home</div>
+          <div onclick='handleScroll("js-content")' class='menu'>Services</div>
+          <div onclick='handleScroll("js-contact")' class='menu'>Contact</div>  
+        </div>
+
+        <!-- <div class='right-menu flashing'>267-575-6240</div> -->
+        <div class='right-menu'>267-575-6240</div>
+      </div>
+    </nav>
+    <div class='bg-wr'>
+      <!-- <img id='js-main-img-2' class='main-img-bg' src='./img/banner-handy.jpg' /> -->
+
+      <!-- <img id='js-main-img-1' class='main-img-partial-bw' src='./img/banner-bw-m.jpg' />
+      <img id='js-main-img-2' class='main-img-partial-col' src='./img/banner-col-m.jpg' />
+      <img id='js-main-img-3' class='main-img-full' src='./img/banner-full-m.jpg' /> -->
+    </div>
+    <header id='js-header' class='header'>
+      <div id='js-banner-wr' class='text-head-wr'>
+        <!-- <span class='text-head caret'>
+          <div class='select-up'></div>
+        </span> -->
+        <span id='js-type-01' class='text-head type-text'></span>
+        <!-- <br/> -->
+        <span id='js-space-01' class='text-head hidden'>&nbsp;</span>
+        <br id='js-next-01' class='hidden' />
+        <span id='js-type-02' class='text-head type-text'></span>
+        <span id='js-space-02' class='text-head hidden'>&nbsp;</span>
+        <br id='js-next-02' class='hidden' />
+        <span id='js-type-03' class='text-head type-text'></span>
+        <div id='js-link' class='link-details-wr'>
+          <!-- <div onclick='handleScroll("js-contact")' class='link-details'><span id='js-link-details'>Free Estimate &gt;</span></div> -->
+          <button onclick='handleScroll("js-contact")' class='button-blue'>Free Estimate &gt;</button>
+
+          <!-- <button onclick='handleScroll("js-content")' class='button-blue link-button'>Service Details &gt;</button> -->
+        </div>
+      </div>
+  
+    </header>
+    <div class='header2'>
+      <div class='hk-title'>Our Services</div>
+      <div class='service-wr fi'>
+        <div id='js-maintenance' class='tool-wr hidden-content'>
+          <img src="./img/maintenance.avif" alt="Description of the image">
+            <div class='tool-circle'>
+              <div class='tool-text'>Home<br/>Maintenance</div>
+            </div>
+            
+        </div>
+        <div id='js-flooring' class='tool-wr hidden-content'>
+          <img src="./img/flooring.avif" alt="Description of the image">
+          <div class='tool-circle'>
+            <div class='tool-text'>Flooring/<br>Remodeling</div>
+          </div>
+        </div>
+        <div id='js-painting' class='tool-wr hidden-content'>
+          <img src="./img/painting.avif" alt="Description of the image">
+          <div class='tool-circle'>
+            <div class='tool-text'>Painting</div>
+          </div>
+        </div>
+        <div id='js-electrical' class='tool-wr hidden-content'>
+          <img src="./img/electrical.avif" alt="Description of the image">
+          <div class='tool-circle'>
+            <div class='tool-text'>Electrical</div>
+          </div>
+        </div>
+        <div id='js-plumbing' class='tool-wr hidden-content'>
+          <img src="./img/plumbing.avif" alt="Description of the image">
+          <div class='tool-circle'>
+            <div class='tool-text'>Bathroom/<br/>Plumbing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <main id ='js-content' rol='content' class='layout-wr'>
+
+    <div class="intro-block"> 
+      <div class='hk-title-mustard'>Who We Are</div>
+      <div class='two-col-wr'>
+        <div class='two-col-title'>
+          <img class='portrait' src='./img/portrait.png' />
+        </div>
+        <div class='two-col-desc'>
+          Hello! I’m a handyman based in the North Wales, Pennsylvania, dedicated to delivering top-quality services for all your home needs. Specializing in home maintenance, remodeling, and a variety of other tasks, I am your go-to expert for keeping your home in top shape.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sample-block"> 
+      <div class='hk-title-blue'>Before & After</div><br/><br/>
+      <div onclick='handleBeforeAfter(event, "js-liv2")'>Before</div>
+      <div class="comparison-container">
+        <img src="./img/l2.jpg" alt="Before" class="comparison-img comparison-before">
+        <img src="./img/l1.jpg" alt="After" class="comparison-img comparison-after">
+        <div class="slider-bar" id="slider-bar">
+          <div class="slider-knob"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+          
+      <div class='contact-wr-wr'>
+        <div class='hk-title-req'>Contact Us</div>
+
+        <div id='js-contact' class='contact-wr'>
+          <div id='js-notice-wr' class='notice-wr hidden'>
+            <div id='js-notice-success' class='notice hidden'>
+              Your request is successfully sent to us.
+            </div>
+            <div id='js-notice-err' class='notice notice-err hidden'>
+              Sorry currently my message box is full. Please contact me at 267=575=6240
+            </div>
+          </div>  
+          <div class='sec-wr'>
+            <!-- <div class='sec-title mb-16px'>
+              Request a service
+            </div> -->
+            <div class='sec-desc text'>
+              Need help with a project? Fill out the form below or call <span class='phone-no flashing'>267-575-6240</span> <br/>
+            </div>
+          </div>
+
+          <form id='js-contact-form' action='https://formspree.io/f/mrgnvzeo' method="POST" class='contact-form-wr'>
+            <div class="contact-form-row">
+              <div class="contact-form-text">
+                <input type='off' class='form-textbox-input' id='name' name='name' autocomplete='nope' placeholder='Your name' required aria-label='Enter name'>
+              </div>
+              <div class='contact-form-sp'></div>
+              <div class="contact-form-text">
+                <input type='email' class='form-textbox-input' id='email' name='email' autocomplete='off' placeholder='Email address' required aria-label='Enter email'>
+              </div>
+              <div class='contact-form-sp'></div>
+              <div class="contact-form-text form-dropdown dropdown-fader">
+                <select class="form-textbox-input form-dropdown-select" data-ignore-tracking="true" id="js-form-service" aria-labelledby="services-dropdown_label">
+                  <option disabled selected="" value="">Select a service type</option>
+                  <option class="services-dropdown-item" value="repair">Home Repair</option>
+                  <option class="services-dropdown-item" value="paint">Painting</option>
+                  <option class="services-dropdown-item" value="Others">Others</option>
+                </select>
+              </div>
+            </div>
+            <textarea placeholder="Please briefly explain your home improvement project." class="form-textbox-input contact-form-textarea" name="message" rows="10" required></textarea>
+            <button type='submit' class='button-blue'>Send your request</button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+    <footer class='footer'>
+      © 2024 Anthony's Web Services
+    </footer>
+
+  </body>
+<script type="text/javascript" src="./js/config.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/scroll.js"></script>
+<script type="text/javascript" src="./js/contact.js"></script>
+<script type="text/javascript" src="./js/type.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+
+</html>
