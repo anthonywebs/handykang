@@ -252,8 +252,7 @@ main {
 }
 
 .service-wr {
-  flex-direction: column;
-  /* display: flex; */
+  display: flex;
   justify-content: space-around;
   max-width: 1200px;
   margin-left: auto;
@@ -414,76 +413,76 @@ main {
   .hk-title, .hk-title-mustard, .hk-title-req, .hk-title-blue {
     font-size: 42px;
   }
-/*  */
   .service-wr {
     flex-direction: column;
+
     /* flex-wrap: wrap; */
+    }
+
+    .tool-wr {
+      max-width: 120px;
+      margin-bottom: 120px;
+    }
+
+    .tool-text {
+      font-size: 20px;  
+    }
+
+    /* Container for the comparison images */
+  .comparison-container {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    margin: auto; /* Center on the page */
   }
 
-  .tool-wr {
-    max-width: 120px;
-    margin-bottom: 120px;
+  .comparison-container2 {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    margin: auto; /* Center on the page */
   }
 
-  .tool-text {
-    font-size: 20px;  
+  /* Images */
+  .comparison-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none; /* Prevent interference with mouse events */
   }
 
-  /* Container for the comparison images */
-.comparison-container {
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
-  margin: auto; /* Center on the page */
-}
+  .comparison-after {
+    clip-path: inset(0 50% 0 0); /* Initially reveal 50% of the "After" image */
+  }
 
-.comparison-container2 {
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  margin: auto; /* Center on the page */
-}
+  /* Slider Bar */
+  .slider-bar {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Start in the middle */
+    width: 5px; /* Width of the bar */
+    height: 100%;
+    background: #fff; /* Bar color */
+    cursor: ew-resize; /* Change cursor to indicate horizontal dragging */
+    z-index: 10;
+  }
 
-/* Images */
-.comparison-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  pointer-events: none; /* Prevent interference with mouse events */
-}
-
-.comparison-after {
-  clip-path: inset(0 50% 0 0); /* Initially reveal 50% of the "After" image */
-}
-
-/* Slider Bar */
-.slider-bar {
-  position: absolute;
-  top: 0;
-  left: 50%; /* Start in the middle */
-  width: 5px; /* Width of the bar */
-  height: 100%;
-  background: #fff; /* Bar color */
-  cursor: ew-resize; /* Change cursor to indicate horizontal dragging */
-  z-index: 10;
-}
-
-/* Knob (circle) */
-.slider-knob {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally within the slider bar */
-  transform: translate(-50%, -50%); /* Precisely center the knob */
-  width: 20px; /* Size of the circle */
-  height: 20px;
-  background: #fff;
-  border: 2px solid #000; /* Optional: Outline for contrast */
-  border-radius: 50%; /* Make it a circle */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Add some depth */
-}
+  /* Knob (circle) */
+  .slider-knob {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally within the slider bar */
+    transform: translate(-50%, -50%); /* Precisely center the knob */
+    width: 20px; /* Size of the circle */
+    height: 20px;
+    background: #fff;
+    border: 2px solid #000; /* Optional: Outline for contrast */
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Add some depth */
+  }
 
 
 }  
