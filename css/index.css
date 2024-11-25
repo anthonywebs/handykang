@@ -193,7 +193,8 @@ main {
 
 .footer{
   padding: 32px 0;
-  text-align: center 
+  text-align: center;
+  background-color: #f9df4e;
 }
 
 .color-trans-white {
