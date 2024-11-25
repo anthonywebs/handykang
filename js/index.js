@@ -93,18 +93,30 @@ const startEventListener = () => {
   window.addEventListener('scroll', throttledHandleScroll);
 
   document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".comparison-container");
-    const sliderBar = document.getElementById("slider-bar");
-    const afterImage = document.querySelector(".comparison-after");
+    // const container1 = document.querySelector(".comparison-container");
+    const container1 = document.getElementById("js-container1");
+    const sliderBar1 = document.getElementById("js-slider-bar1");
+    const afterImage1 = document.getElementById("js-img1-after");
+    const container2 = document.getElementById("js-container2");
+    const sliderBar2 = document.getElementById("js-slider-bar2");
+    const afterImage2 = document.getElementById("js-img2-after");
+    // const afterImage1 = document.querySelector(".comparison-after");
   
-    let isDragging = false;
+    let isDragging1 = false;
+    let isDragging2 = false;
 
     const setStartingPoint = () => {
-      const rect = container.getBoundingClientRect();
-      const startX = rect.width * 0.3; // 30% of the container's width
+      const rect1 = container1.getBoundingClientRect();
+      const startX1 = rect1.width * 0.3; // 30% of the container1's width
   
-      sliderBar.style.left = `${startX}px`; // Position the slider bar at 20%
-      afterImage.style.clipPath = `inset(0 ${100 - 30}% 0 0)`; // Clip 80% of the "After" image
+      sliderBar1.style.left = `${startX1}px`; // Position the slider bar at 20%
+      afterImage1.style.clipPath = `inset(0 ${100 - 30}% 0 0)`; // Clip 80% of the "After" image
+
+      const rect2 = container2.getBoundingClientRect();
+      const startX2 = rect2.width * 0.3; // 30% of the container1's width
+  
+      sliderBar2.style.left = `${startX2}px`; // Position the slider bar at 20%
+      afterImage2.style.clipPath = `inset(0 ${100 - 30}% 0 0)`; // Clip 80% of the "After" image
     };
 
       // Call the starting point function once DOM is loaded
@@ -112,68 +124,90 @@ const startEventListener = () => {
 
       // Helper function to handle movement (used for both mouse and touch)
     function handleMove(clientX) {
-      const rect = container.getBoundingClientRect();
+      const rect = container1.getBoundingClientRect();
       let offsetX = clientX - rect.left;
 
-      // Constrain the movement within the container
+      // Constrain the movement within the container1
       offsetX = Math.max(0, Math.min(offsetX, rect.width));
 
       // Update slider position and image clipping
-      sliderBar.style.left = `${offsetX}px`;
+      sliderBar1.style.left = `${offsetX}px`;
       const percentage = (offsetX / rect.width) * 100;
-      afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      afterImage1.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    }
+
+    function handleMove2(clientX) {
+      const rect = container2.getBoundingClientRect();
+      let offsetX = clientX - rect.left;
+
+      // Constrain the movement within the container1
+      offsetX = Math.max(0, Math.min(offsetX, rect.width));
+
+      // Update slider position and image clipping
+      sliderBar2.style.left = `${offsetX}px`;
+      const percentage = (offsetX / rect.width) * 100;
+      afterImage2.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
     }
   
     // Mouse down event to start dragging
-    sliderBar.addEventListener("mousedown", e => {
+    sliderBar1.addEventListener("mousedown", e => {
       e.preventDefault();
-      console.log("AK: Mouse Down")
-      isDragging = true;
+      isDragging1 = true;
     });
-  
+
+    sliderBar2.addEventListener("mousedown", e => {
+      e.preventDefault();
+      isDragging2 = true;
+    });
+
     // Mouse up event to stop dragging
     document.addEventListener("mouseup", () => {
-      isDragging = false;
-      sliderBar.blur(); // Prevent focus styling
+      isDragging1 = false;
+      isDragging2 = false;
+      sliderBar1.blur(); // Prevent focus styling
+      sliderBar2.blur(); // Prevent focus styling
     });
   
     // Mouse move event to adjust the slider
-    container.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
+    container1.addEventListener("mousemove", (e) => {
+      if (!isDragging1) return;
       handleMove(e.clientX);
-
-
+    });
   
-      // // Get the container's boundaries
-      // const rect = container.getBoundingClientRect();
-      // let offsetX = e.clientX - rect.left;
-  
-      // // Constrain the slider within the container
-      // offsetX = Math.max(0, Math.min(offsetX, rect.width));
-  
-      // // Update the position of the slider bar
-      // sliderBar.style.left = `${offsetX}px`;
-  
-      // // Adjust the clip-path of the "After" image
-      // const percentage = (offsetX / rect.width) * 100;
-      // afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    // Mouse move event to adjust the slider
+    container2.addEventListener("mousemove", (e) => {
+      if (!isDragging2) return;
+      handleMove2(e.clientX);
     });
 
       // Touch events
-    sliderBar.addEventListener("touchstart", (e) => {
-      isDragging = true;
+    sliderBar1.addEventListener("touchstart", (e) => {
       e.preventDefault(); // Prevent scrolling
+      isDragging1 = true;
+    });
+
+    sliderBar2.addEventListener("touchstart", (e) => {
+      e.preventDefault(); // Prevent scrolling
+      isDragging2 = true;
     });
 
     document.addEventListener("touchend", () => {
-      isDragging = false;
+      isDragging1 = false;
+      isDragging2 = false;
     });
 
-    container.addEventListener("touchmove", (e) => {
-      if (!isDragging) return;
+    container1.addEventListener("touchmove", (e) => {
+      if (!isDragging1) return;
       const touch = e.touches[0]; // Get the first touch point
       handleMove(touch.clientX);
     });
+
+    container2.addEventListener("touchmove", (e) => {
+      if (!isDragging2) return;
+      const touch = e.touches[0]; // Get the first touch point
+      handleMove2(touch.clientX);
+    });
+
   });
     
 
