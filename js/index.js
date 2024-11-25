@@ -183,13 +183,13 @@ const startEventListener = () => {
       // Touch events
     // sliderBar1.addEventListener("touchstart", (e) => {
     container1.addEventListener("touchstart", (e) => {
-      e.preventDefault(); // Prevent scrolling
+      // e.preventDefault(); // Prevent scrolling
       isDragging1 = true;
     });
 
     // sliderBar2.addEventListener("touchstart", (e) => {
     container2.addEventListener("touchstart", (e) => {
-      e.preventDefault(); // Prevent scrolling
+      // e.preventDefault(); // Prevent scrolling
       isDragging2 = true;
     });
 
