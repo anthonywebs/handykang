@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
-  /* overflow-x: hidden;  */
+  overflow-x: hidden; 
 }
 
 html {
-  overflow-x: hidden; 
+  /* overflow-x: hidden;  */
   box-sizing: border-box;
   font-family: "SF_Pro_Display_Regular", sans-serif;
   font-size: 16px;
@@ -69,14 +69,14 @@ header {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;  
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .header2 {
   /* height: 40vh; */
   background-color: rgb(43,108,163);
   min-height: 50vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   /* height: 100%; */
   /* background-color: transparent; */
@@ -186,7 +186,7 @@ main {
   /* top: 100vh; */
   padding-top: 5vh;
   padding-bottom: 5vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   /* background-color: #fff; */
 }
