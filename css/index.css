@@ -252,7 +252,8 @@ main {
 }
 
 .service-wr {
-  display: flex;
+  flex-direction: column;
+  /* display: flex; */
   justify-content: space-around;
   max-width: 1200px;
   margin-left: auto;
@@ -415,7 +416,8 @@ main {
   }
 /*  */
   .service-wr {
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
   }
 
   .tool-wr {
