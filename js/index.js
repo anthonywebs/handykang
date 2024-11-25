@@ -109,6 +109,20 @@ const startEventListener = () => {
 
       // Call the starting point function once DOM is loaded
     setStartingPoint();
+
+      // Helper function to handle movement (used for both mouse and touch)
+    function handleMove(clientX) {
+      const rect = container.getBoundingClientRect();
+      let offsetX = clientX - rect.left;
+
+      // Constrain the movement within the container
+      offsetX = Math.max(0, Math.min(offsetX, rect.width));
+
+      // Update slider position and image clipping
+      sliderBar.style.left = `${offsetX}px`;
+      const percentage = (offsetX / rect.width) * 100;
+      afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    }
   
     // Mouse down event to start dragging
     sliderBar.addEventListener("mousedown", e => {
@@ -120,28 +134,45 @@ const startEventListener = () => {
     // Mouse up event to stop dragging
     document.addEventListener("mouseup", () => {
       isDragging = false;
+      sliderBar.blur(); // Prevent focus styling
     });
   
     // Mouse move event to adjust the slider
     container.addEventListener("mousemove", (e) => {
-      console.log("AK: move", isDragging)
       if (!isDragging) return;
-      console.log("AK: move2")
+      handleMove(e.clientX);
+
 
   
-      // Get the container's boundaries
-      const rect = container.getBoundingClientRect();
-      let offsetX = e.clientX - rect.left;
+      // // Get the container's boundaries
+      // const rect = container.getBoundingClientRect();
+      // let offsetX = e.clientX - rect.left;
   
-      // Constrain the slider within the container
-      offsetX = Math.max(0, Math.min(offsetX, rect.width));
+      // // Constrain the slider within the container
+      // offsetX = Math.max(0, Math.min(offsetX, rect.width));
   
-      // Update the position of the slider bar
-      sliderBar.style.left = `${offsetX}px`;
+      // // Update the position of the slider bar
+      // sliderBar.style.left = `${offsetX}px`;
   
-      // Adjust the clip-path of the "After" image
-      const percentage = (offsetX / rect.width) * 100;
-      afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      // // Adjust the clip-path of the "After" image
+      // const percentage = (offsetX / rect.width) * 100;
+      // afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    });
+
+      // Touch events
+    sliderBar.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      e.preventDefault(); // Prevent scrolling
+    });
+
+    document.addEventListener("touchend", () => {
+      isDragging = false;
+    });
+
+    container.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      const touch = e.touches[0]; // Get the first touch point
+      handleMove(touch.clientX);
     });
   });
     
