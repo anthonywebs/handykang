@@ -3,6 +3,7 @@
 }
 
 html {
+  overflow-x: hidden; 
   box-sizing: border-box;
   font-family: "SF_Pro_Display_Regular", sans-serif;
   font-size: 16px;
