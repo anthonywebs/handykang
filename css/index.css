@@ -133,7 +133,10 @@ header {
 }
 
 .phone-no {
-  color: #f9df4e !important;
+  /* color: #f9df4e !important; */
+  padding: 4px;
+  color:  #0e4d82;
+  background-color: #f9df4e;
   font-family: 'SF_Pro_Display_Regular', sans-serif;
   
 }
