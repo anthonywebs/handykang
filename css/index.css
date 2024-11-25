@@ -518,10 +518,4 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Add some depth */
   }
 
-
-  .before-desc {
-      font-size: 20px;
-  }
-
-
 }  
