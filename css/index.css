@@ -261,6 +261,16 @@ main {
   /* border: 1px solid red; */
 }
 
+.service-wr-m {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
 .tool-wr {
   display: flex;
   flex-direction: column;

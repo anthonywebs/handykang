@@ -72,13 +72,14 @@ const handleScrollEvent = () => {
   const hiddenContents = document.querySelectorAll('.hidden-content');
 
   hiddenContents.forEach(el => {
-    const offset = isMobile() ? 300 : 450;
+    const offset = isMobile() ? 100 : 450;
     const diff = elementPostionInViewport(el) - offset;
 
     if (diff > 0) {
       const [img, circle] = el.children;
       const imgMarginTop = 100 - (diff/5);
-      const cirMarginTop = 700 - diff * 3;
+      const cirMarginTop = 600 - diff * 2;
+      // const cirMarginTop = 700 - diff * 3;
       img.style.marginTop = imgMarginTop < 0 ? 0 : `${imgMarginTop}px`;
       circle.style.marginTop = cirMarginTop < 100 ? '100px' : `${cirMarginTop}px`;
     }
@@ -216,6 +217,7 @@ const startEventListener = () => {
 const main = async () => {
   // await loadEnv();
   startEventListener();
+  document.getElementById(isMobile() ? 'js-service' : 'js-service-m').classList.add('hidden');
   // if (loc !== conv(cn)) bd.innerHTML = '';
 
   // if (!isMobile()) {
