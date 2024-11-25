@@ -15,6 +15,7 @@ html {
 .body {
   /* min-height: 100%; */
   margin: 0;
+  width: 100%;
   background: url('../img/floor-bg.jpg') no-repeat top center;  
   background-repeat: repeat;
   background-position: top center;
