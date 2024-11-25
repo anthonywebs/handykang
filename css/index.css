@@ -308,7 +308,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  font-family: 'SF_Pro_Display_Thin', sans-serif;
+  /* font-family: 'SF_Pro_Display_Thin', sans-serif; */
   font-size: 28px;
   color: #f9df4e;
   width: 160px;
