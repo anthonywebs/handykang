@@ -75,18 +75,12 @@ header {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;  
-  /* overflow-x: hidden; */
 }
 
 .header2 {
   /* height: 40vh; */
   background-color: rgb(43,108,163);
   min-height: 50vh;
-  /* overflow-x: hidden; */
-
-  /* height: 100%; */
-  /* background-color: transparent; */
-
 }
 
 .intro-block {
@@ -395,6 +389,16 @@ main {
 
 /* Mobile, <540px */
 @media only screen and (max-width: 540px) {
+  header {
+    height: 70vh;
+  }
+  
+  .header2 {
+    min-height: 30vh;
+  }
+  
+
+
   .left-menu {
     margin-left: 24px;
   }
@@ -423,6 +427,7 @@ main {
   .hk-title, .hk-title-mustard, .hk-title-req, .hk-title-blue {
     font-size: 42px;
   }
+
   .service-wr {
     flex-direction: column;
 
