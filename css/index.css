@@ -206,7 +206,8 @@ main {
 }
 
 .white-link:hover {
-  text-decoration: underline;
+  color: #f9df4e;
+  text-decoration: none;
 }
 
 .before-desc {
