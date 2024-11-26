@@ -201,16 +201,17 @@ main {
 .white-link, .white-link:link, .white-link:visited {
   /* color: #06c; */
   color: #f9df4e;
-  text-decoration: none;
+  /* text-decoration: underline; */
   /* color: #fff; */
   display: inline-block;
+  border-bottom: 1px solid rgba(249,223,78,0.7);
 }
 
 .white-link:hover {
   color: #fff;
   /* color: #f9df4e; */
-  /* text-decoration: none; */
-  text-decoration: underline;
+  text-decoration: none;
+  /* text-decoration: underline; */
 }
 
 .before-desc {
