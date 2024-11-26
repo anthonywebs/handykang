@@ -9,7 +9,7 @@ const renderBanner = async () => {
   await elapseTime(200);
   getEl('js-header').scrollIntoView();
   await elapseTime(500);
-  await typeText('js-type-01', `Kang's`, 70);
+  await typeText('js-type-01', `Tower`, 70);
   await elapseTime(300);
   getEl('js-space-01').classList.remove('hidden');
   getEl('js-next-01').classList.remove('hidden');
