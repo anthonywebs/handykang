@@ -200,14 +200,17 @@ main {
 
 .white-link, .white-link:link, .white-link:visited {
   /* color: #06c; */
-  color: #fff;
-  text-decoration: underline;
+  color: #f9df4e;
+  text-decoration: none;
+  /* color: #fff; */
   display: inline-block;
 }
 
 .white-link:hover {
-  color: #f9df4e;
-  text-decoration: none;
+  color: #fff;
+  /* color: #f9df4e; */
+  /* text-decoration: none; */
+  text-decoration: underline;
 }
 
 .before-desc {
@@ -226,7 +229,9 @@ main {
   padding: 24px 0;
   text-align: center;
   font-size: 20px;
-  color: #fff;
+  /* color: #fff; */
+  color: #f9df4e;
+
   /* background-color: #f9df4e; */
   background-color: #1a1a1a;
 }
