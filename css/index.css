@@ -197,6 +197,17 @@ main {
   /* background-color: #fff; */
 }
 
+phone-link, phone-link:link, phone-link:visited {
+  color: #06c;
+  /* color: #fff; */
+  text-decoration: none;
+  display: inline-block;
+}
+
+phone-link:hover {
+  text-decoration: underline;
+}
+
 .before-desc {
   /* width: 60%; */
     /* color: #86868b; */
