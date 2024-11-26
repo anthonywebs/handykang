@@ -212,7 +212,10 @@ main {
 .footer{
   padding: 24px 0;
   text-align: center;
-  background-color: #f9df4e;
+  font-size: 20px;
+  color: #fff;
+  /* background-color: #f9df4e; */
+  background-color: #1a1a1a;
 }
 
 .color-trans-white {

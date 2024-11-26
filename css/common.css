@@ -1,5 +1,6 @@
 a, a:link, a:visited {
-  color: #06c;
+  /* color: #06c; */
+  color: #fff;
   text-decoration: none;
   display: inline-block;
 }
