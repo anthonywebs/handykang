@@ -82,7 +82,7 @@ header {
 .header2 {
   /* height: 40vh; */
   background-color: rgb(43,108,163);
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 .intro-block {
@@ -153,11 +153,11 @@ header {
   justify-content: center;
 
 
-  /* background: url('../img/floor-bg.avif') no-repeat top center;  
+  background: url('../img/floor-bg.avif') no-repeat top center;  
   background-repeat: repeat;
   background-position: top center;
   background-size: cover;  
-  filter: brightness(40%);  */
+  filter: brightness(40%); 
 }
 
 .bg-wr img {
@@ -272,6 +272,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
+  margin-bottom: -100px;
   /* border: 1px solid red; */
 }
 
@@ -296,7 +297,7 @@ main {
   width: 100%;
   /* width: 70px; */
   min-height: 200px;
-  margin-bottom: -12px !important;
+  /* margin-bottom: 8px !important; */
   /* margin-left: auto;
   margin-right: auto; */
 }
@@ -429,7 +430,7 @@ main {
   }
   
   .header2 {
-    min-height: 30vh;
+    min-height: 80vh;
   }
   
 
