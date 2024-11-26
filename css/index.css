@@ -201,7 +201,7 @@ main {
 .white-link, .white-link:link, .white-link:visited {
   /* color: #06c; */
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
   display: inline-block;
 }
 
