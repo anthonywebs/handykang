@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  overflow-x: hidden; 
+  /* overflow-x: hidden;  */
 }
 
 html {
@@ -289,6 +289,7 @@ main {
 .tool-wr {
   display: flex;
   flex-direction: column;
+  
   justify-content: center;
   align-items: center;
   /* position: relative; */
@@ -302,6 +303,7 @@ main {
 .tool-wr img {
   margin-top: 50px;
   /* display: inline-block; */
+  
   width: 60px;
   /* justify-content: center; */
   /* text-align: center; */
@@ -469,6 +471,7 @@ main {
     .tool-wr {
       max-width: 32%;
       margin-bottom: 120px;
+      min-height: 100px;
     }
 
     .tool-text {
