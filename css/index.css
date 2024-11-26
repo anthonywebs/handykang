@@ -387,9 +387,9 @@ main {
 
 .comparison-container2 {
   position: relative;
-  width: 800px;
+  width: 1200px;
   /* max-width: 800px; Set your desired width */
-  height: 1000px;
+  height: 1500px;
   overflow: hidden;
   margin: auto; /* Center on the page */
 }
