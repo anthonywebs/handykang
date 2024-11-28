@@ -23,6 +23,8 @@ const renderBanner = async () => {
   await elapseTime(1000);
 
   getEl('js-link').style.opacity = 1;
+  getEl('js-link').classList.add('fi-short');
+
   // getEl('js-link-details').classList.add('flashing');
 
 
